@@ -225,6 +225,27 @@
     .follow{padding:32px 24px; flex-direction:column; align-items:flex-start;}
   }
 
+  /* ---------- EVENT POLICIES ---------- */
+  .policy-intro{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:16px 20px; font-size:0.9rem; color:var(--ink-soft); margin-bottom:16px;
+  }
+  .policy-intro strong{color:var(--ink);}
+  .policy-list{
+    list-style:none; margin:0; padding:0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .policy-list li{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:12px 16px; display:flex; gap:10px; align-items:flex-start;
+    font-size:0.85rem; color:var(--ink-soft); line-height:1.45;
+  }
+  .policy-num{
+    font-family:'IBM Plex Mono',monospace; font-size:0.7rem; font-weight:600;
+    color:var(--burnt); flex-shrink:0; margin-top:2px;
+  }
+  .policy-list strong{color:var(--ink);}
+
   /* ---------- OFFICERS ---------- */
   .board-group{margin-bottom:40px;}
   .board-group h3{
@@ -246,8 +267,7 @@
   .officer-card .name.placeholder{color:#B8B2A4; font-style:italic; font-weight:500;}
 
   /* ---------- CALENDAR (under pillars) ---------- */
-  .cal-layout{display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start;}
-  @media (max-width:860px){.cal-layout{grid-template-columns:1fr;}}
+  .cal-layout{display:flex; flex-direction:column; gap:32px;}
   .gm-schedule{
     background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
     padding:24px 26px;
@@ -273,7 +293,7 @@
     border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
     background:#fff;
   }
-  .cal-embed iframe{width:100%; height:460px; border:0; display:block;}
+  .cal-embed iframe{width:100%; height:600px; border:0; display:block;}
   .cal-note{
     font-size:0.82rem; color:var(--ink-soft); padding:14px 16px; border-top:1px solid var(--line);
     background:#FBF9F4;
@@ -424,7 +444,28 @@
   </section>
 
   <!-- ================= CALENDAR ================= -->
-  <section id="calendar">
+  <!-- ================= EVENT POLICIES ================= -->
+  <section id="policies">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Read this first</span>
+        <h2>How event sign-ups work</h2>
+      </div>
+      <div class="policy-intro">
+        Sign up for events using the calendar below. Some events skip the sign-up sheet entirely, and others need extra registration — check each event's details. Questions go to that event's coordinator.
+      </div>
+      <ul class="policy-list">
+        <li><span class="policy-num">01</span><span>Sheets open <strong>7:30 AM, one week out</strong> (occasionally two — we'll flag it ahead of time).</span></li>
+        <li><span class="policy-num">02</span><span>Sheet full? Join the <strong>waitlist</strong> at the bottom — don't add extra spots or jump into an opened slot out of order.</span></li>
+        <li><span class="policy-num">03</span><span>Complete <strong>every field</strong> on the sheet or your entry may get pulled.</span></li>
+        <li><span class="policy-num">04</span><span>Confirmations send <strong>8:00 AM, two days out</strong>; sheets close that same night at <strong>11:59 PM</strong>.</span></li>
+        <li><span class="policy-num">05</span><span>Need to drop? Message the coordinator by <strong>11:59 PM</strong> the day confirmations go out — late cancels cost a point.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= CALENDAR ================= -->
+  <section id="calendar" style="background:#F4F0E6;">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Stay in the loop</span>
